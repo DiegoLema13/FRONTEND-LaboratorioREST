@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <!-- HomeFragment -->
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.gestionhuman.ui.home.HomeFragment"
+        android:label="Panel de Tareas del Dia"
+        tools:layout="@layout/fragment_home">
+        <!-- Acción para navegar a GalleryFragment -->
+        <action
+            android:id="@+id/action_home_to_gallery"
+            app:destination="@id/nav_gallery" />
+    </fragment>
+
+    <!-- GalleryFragment -->
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.gestionhuman.ui.gallery.GalleryFragment"
+        android:label="Administracion de Tareas"
+        tools:layout="@layout/fragment_gallery" />
+
+    <!-- SlideshowFragment -->
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.gestionhuman.ui.slideshow.SlideshowFragment"
+        android:label="Salir"
+        tools:layout="@layout/fragment_slideshow" />
+</navigation>
